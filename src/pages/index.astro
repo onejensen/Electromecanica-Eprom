@@ -3,21 +3,25 @@ import Layout from '../layouts/Layout.astro';
 
 const servicios = [
   {
+    numero: '01',
     titulo: 'Diagnóstico Electrónico',
     descripcion: 'Lectura y borrado de códigos de error con equipos de última generación. Identificamos el problema con precisión.',
     icono: 'M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z',
   },
   {
+    numero: '02',
     titulo: 'Electricidad del Automóvil',
     descripcion: 'Reparación de sistemas eléctricos: alternador, motor de arranque, iluminación, cableado y más.',
     icono: 'M13 10V3L4 14h7v7l9-11h-7z',
   },
   {
+    numero: '03',
     titulo: 'Mantenimiento Preventivo',
     descripcion: 'Revisiones periódicas para mantener tu vehículo en óptimas condiciones y evitar averías costosas.',
     icono: 'M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z',
   },
   {
+    numero: '04',
     titulo: 'Reparación de Motores',
     descripcion: 'Diagnóstico y reparación completa de motores gasolina y diésel con garantía de calidad.',
     icono: 'M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z',
@@ -27,30 +31,43 @@ const servicios = [
 
 <Layout title="Taller Electromecánica en Palma de Mallorca" description="Electromecánica Eprom - Taller de electromecánica en Palma de Mallorca. Diagnóstico electrónico, electricidad del automóvil, mantenimiento preventivo y reparación de motores.">
 
-  <!-- Hero -->
-  <section style="position:relative;background:#111111;padding:80px 0 96px;overflow:hidden;">
+  <!-- HERO — INDUSTRIAL/BOLD -->
+  <section style="position:relative;background:#1A1A1A;padding:100px 0 112px;overflow:hidden;min-height:580px;display:flex;align-items:center;">
+    <!-- Background industrial photo -->
     <img
       src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=1600&q=80"
       alt="Taller electromecánica"
-      style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.12;"
+      style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.10;"
     />
-    <div style="position:absolute;bottom:0;left:0;right:0;height:4px;background:#F5A623;"></div>
-    <div style="position:relative;max-width:1280px;margin:0 auto;padding:0 24px;">
-      <div style="max-width:800px;">
-        <div style="display:inline-block;background:#F5A623;color:#111111;font-family:'Archivo Black',sans-serif;font-size:0.7rem;text-transform:uppercase;letter-spacing:0.15em;padding:8px 20px;margin-bottom:32px;">
+    <!-- Dark overlay -->
+    <div style="position:absolute;inset:0;background:linear-gradient(135deg, rgba(26,26,26,0.97) 0%, rgba(26,26,26,0.80) 100%);"></div>
+    <!-- Orange accent bottom line -->
+    <div style="position:absolute;bottom:0;left:0;right:0;height:5px;background:#F5A623;"></div>
+    <!-- Orange side stripe -->
+    <div style="position:absolute;left:0;top:0;bottom:0;width:5px;background:#F5A623;"></div>
+
+    <div style="position:relative;max-width:1280px;margin:0 auto;padding:0 40px;width:100%;">
+      <div style="max-width:820px;" class="animate-fade-in-up">
+        <!-- Badge label -->
+        <div style="display:inline-block;background:#F5A623;color:#111111;font-family:'Barlow Condensed',sans-serif;font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.2em;padding:8px 20px;margin-bottom:32px;" class="animate-fade-in-up animate-delay-1">
           Electromecánica · Palma de Mallorca
         </div>
-        <h1 style="font-family:'Archivo Black',sans-serif;font-size:clamp(2.5rem,6vw,5rem);font-weight:900;color:#fff;margin-bottom:24px;line-height:1.05;letter-spacing:-0.02em;">
-          Tu taller de <span style="color:#F5A623;">electromecánica</span> de confianza en Palma
+        <!-- Hero title — Bebas Neue massive -->
+        <h1 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(3.5rem,9vw,8rem);color:#F0F0F0;margin-bottom:0;line-height:0.92;letter-spacing:0.03em;" class="animate-fade-in-up animate-delay-2">
+          Tu taller de<br/>
+          <span style="color:#F5A623;">electro<wbr/>mecánica</span><br/>
+          de confianza
         </h1>
-        <p style="font-size:clamp(1rem,2vw,1.2rem);color:#9ca3af;margin-bottom:40px;line-height:1.6;font-family:system-ui,sans-serif;max-width:600px;">
+        <!-- Orange accent underline -->
+        <div style="width:120px;height:4px;background:#F5A623;margin:24px 0;" class="animate-fade-in-up animate-delay-3"></div>
+        <p style="font-size:clamp(1rem,2vw,1.2rem);color:#9ca3af;margin-bottom:44px;line-height:1.6;font-family:'Barlow Condensed',sans-serif;font-weight:400;max-width:560px;letter-spacing:0.02em;" class="animate-fade-in-up animate-delay-3">
           Especialistas en diagnóstico electrónico, electricidad del automóvil y mantenimiento preventivo. Más de 20 años cuidando de tu vehículo en Mallorca.
         </p>
-        <div style="display:flex;flex-wrap:wrap;gap:16px;">
-          <a href="/contacto/" style="padding:16px 40px;background:#F5A623;color:#111111;font-family:'Archivo Black',sans-serif;font-size:1rem;text-decoration:none;border-radius:4px;text-transform:uppercase;letter-spacing:0.08em;font-weight:900;transition:background 0.15s;box-shadow:4px 4px 0 #c97d10;" onmouseover="this.style.background='#c97d10'" onmouseout="this.style.background='#F5A623'">
+        <div style="display:flex;flex-wrap:wrap;gap:16px;" class="animate-fade-in-up animate-delay-4">
+          <a href="/contacto/" style="padding:16px 44px;background:#F5A623;color:#111111;font-family:'Barlow Condensed',sans-serif;font-size:1.1rem;font-weight:700;text-decoration:none;border-radius:2px;text-transform:uppercase;letter-spacing:0.1em;transition:background 0.15s,transform 0.15s;display:inline-block;" onmouseover="this.style.background='#c97d10';this.style.transform='translateY(-2px)'" onmouseout="this.style.background='#F5A623';this.style.transform='translateY(0)'">
             Pedir Cita
           </a>
-          <a href="tel:+34971906236" style="padding:16px 40px;background:transparent;color:#fff;font-family:'Archivo Black',sans-serif;font-size:1rem;text-decoration:none;border-radius:4px;border:2px solid #fff;text-transform:uppercase;letter-spacing:0.08em;font-weight:900;transition:all 0.15s;" onmouseover="this.style.background='rgba(255,255,255,0.1)'" onmouseout="this.style.background='transparent'">
+          <a href="tel:+34971906236" style="padding:16px 44px;background:transparent;color:#F0F0F0;font-family:'Barlow Condensed',sans-serif;font-size:1.1rem;font-weight:700;text-decoration:none;border-radius:2px;border:2px solid #F5A623;text-transform:uppercase;letter-spacing:0.1em;transition:all 0.15s;display:inline-block;" onmouseover="this.style.background='rgba(245,166,35,0.12)';this.style.transform='translateY(-2px)'" onmouseout="this.style.background='transparent';this.style.transform='translateY(0)'">
             Llamar Ahora
           </a>
         </div>
@@ -58,100 +75,111 @@ const servicios = [
     </div>
   </section>
 
-  <!-- Stats Bar -->
-  <section style="background:#F5A623;padding:24px 0;">
-    <div style="max-width:1280px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:repeat(2,1fr);gap:16px;" class="md:grid-cols-4">
-      <div style="text-align:center;">
-        <div style="font-family:'Archivo Black',sans-serif;font-size:2.5rem;font-weight:900;color:#111111;line-height:1;">20+</div>
-        <p style="color:rgba(0,0,0,0.7);font-size:0.8rem;text-transform:uppercase;letter-spacing:0.1em;margin-top:4px;">Años de experiencia</p>
+  <!-- STATS BAR — orange background -->
+  <section style="background:#F5A623;padding:28px 0;">
+    <div style="max-width:1280px;margin:0 auto;padding:0 40px;display:grid;grid-template-columns:repeat(4,1fr);gap:16px;">
+      <div style="text-align:center;" class="animate-fade-in-up animate-delay-1">
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:3rem;color:#111111;line-height:1;letter-spacing:0.04em;">20+</div>
+        <p style="color:rgba(0,0,0,0.65);font-family:'Barlow Condensed',sans-serif;font-size:0.8rem;font-weight:600;text-transform:uppercase;letter-spacing:0.12em;margin-top:4px;">Años de experiencia</p>
       </div>
-      <div style="text-align:center;">
-        <div style="font-family:'Archivo Black',sans-serif;font-size:2.5rem;font-weight:900;color:#111111;line-height:1;">5000+</div>
-        <p style="color:rgba(0,0,0,0.7);font-size:0.8rem;text-transform:uppercase;letter-spacing:0.1em;margin-top:4px;">Vehículos reparados</p>
+      <div style="text-align:center;" class="animate-fade-in-up animate-delay-2">
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:3rem;color:#111111;line-height:1;letter-spacing:0.04em;">5000+</div>
+        <p style="color:rgba(0,0,0,0.65);font-family:'Barlow Condensed',sans-serif;font-size:0.8rem;font-weight:600;text-transform:uppercase;letter-spacing:0.12em;margin-top:4px;">Vehículos reparados</p>
       </div>
-      <div style="text-align:center;">
-        <div style="font-family:'Archivo Black',sans-serif;font-size:2.5rem;font-weight:900;color:#111111;line-height:1;">100%</div>
-        <p style="color:rgba(0,0,0,0.7);font-size:0.8rem;text-transform:uppercase;letter-spacing:0.1em;margin-top:4px;">Transparencia</p>
+      <div style="text-align:center;" class="animate-fade-in-up animate-delay-3">
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:3rem;color:#111111;line-height:1;letter-spacing:0.04em;">100%</div>
+        <p style="color:rgba(0,0,0,0.65);font-family:'Barlow Condensed',sans-serif;font-size:0.8rem;font-weight:600;text-transform:uppercase;letter-spacing:0.12em;margin-top:4px;">Transparencia</p>
       </div>
-      <div style="text-align:center;">
-        <div style="font-family:'Archivo Black',sans-serif;font-size:2.5rem;font-weight:900;color:#111111;line-height:1;">24h</div>
-        <p style="color:rgba(0,0,0,0.7);font-size:0.8rem;text-transform:uppercase;letter-spacing:0.1em;margin-top:4px;">Diagnóstico rápido</p>
+      <div style="text-align:center;" class="animate-fade-in-up animate-delay-4">
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:3rem;color:#111111;line-height:1;letter-spacing:0.04em;">24h</div>
+        <p style="color:rgba(0,0,0,0.65);font-family:'Barlow Condensed',sans-serif;font-size:0.8rem;font-weight:600;text-transform:uppercase;letter-spacing:0.12em;margin-top:4px;">Diagnóstico rápido</p>
       </div>
     </div>
   </section>
 
-  <!-- Servicios destacados -->
-  <section style="padding:80px 0;background:#f8fafc;">
-    <div style="max-width:1280px;margin:0 auto;padding:0 24px;">
-      <div style="margin-bottom:48px;">
-        <div style="display:inline-block;background:#F5A623;color:#111111;font-family:'Archivo Black',sans-serif;font-size:0.7rem;text-transform:uppercase;letter-spacing:0.15em;padding:6px 14px;margin-bottom:16px;">Servicios</div>
-        <h2 style="font-family:'Archivo Black',sans-serif;font-size:clamp(2rem,4vw,3rem);font-weight:900;color:#111111;line-height:1.1;letter-spacing:-0.02em;">Nuestros Servicios</h2>
-        <p style="color:#64748b;margin-top:12px;max-width:480px;font-family:system-ui,sans-serif;">Soluciones completas de electromecánica para tu vehículo con la última tecnología.</p>
+  <!-- SERVICIOS — industrial dark cards with orange top-border -->
+  <section style="padding:96px 0;background:#1A1A1A;">
+    <div style="max-width:1280px;margin:0 auto;padding:0 40px;">
+      <div style="margin-bottom:56px;">
+        <div style="display:inline-block;background:#F5A623;color:#111111;font-family:'Barlow Condensed',sans-serif;font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.2em;padding:6px 16px;margin-bottom:16px;">Servicios</div>
+        <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(2.5rem,5vw,5rem);color:#F0F0F0;line-height:1.0;letter-spacing:0.04em;">Nuestros Servicios</h2>
+        <!-- Orange underline -->
+        <div style="width:80px;height:3px;background:#F5A623;margin-top:16px;"></div>
+        <p style="color:#9ca3af;margin-top:16px;max-width:480px;font-family:'Barlow Condensed',sans-serif;font-size:1rem;letter-spacing:0.02em;">Soluciones completas de electromecánica para tu vehículo con la última tecnología.</p>
       </div>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;">
-        {servicios.map(s => (
-          <div style="background:#fff;border:2px solid #e2e8f0;border-radius:4px;padding:32px;transition:all 0.15s;box-shadow:4px 4px 0 transparent;" onmouseover="this.style.borderColor='#F5A623';this.style.boxShadow='4px 4px 0 #F5A623'" onmouseout="this.style.borderColor='#e2e8f0';this.style.boxShadow='4px 4px 0 transparent'">
-            <div style="width:48px;height:48px;background:#F5A623;border-radius:4px;display:flex;align-items:center;justify-content:center;margin-bottom:20px;">
-              <svg xmlns="http://www.w3.org/2000/svg" style="height:24px;width:24px;color:#111111;" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:2px;">
+        {servicios.map((s, i) => (
+          <div
+            style={`background:#242424;border-top:3px solid #F5A623;border-left:1px solid #333;border-right:1px solid #333;border-bottom:1px solid #333;border-radius:2px;padding:36px 32px;transition:transform 0.2s ease,box-shadow 0.2s ease;position:relative;overflow:hidden;animation:fadeInUp 0.6s ease-out ${(i*0.1)+0.2}s both;`}
+            onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(0,0,0,0.5)'"
+            onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none'"
+          >
+            <!-- Large number watermark -->
+            <div style="position:absolute;top:-10px;right:16px;font-family:'Bebas Neue',sans-serif;font-size:7rem;color:#F5A623;opacity:0.07;line-height:1;pointer-events:none;user-select:none;">
+              {s.numero}
+            </div>
+            <!-- Service number -->
+            <div style="font-family:'Bebas Neue',sans-serif;font-size:2.5rem;color:#F5A623;line-height:1;letter-spacing:0.04em;margin-bottom:12px;">
+              {s.numero}
+            </div>
+            <!-- Icon -->
+            <div style="width:44px;height:44px;background:#F5A623;border-radius:2px;display:flex;align-items:center;justify-content:center;margin-bottom:20px;">
+              <svg xmlns="http://www.w3.org/2000/svg" style="height:22px;width:22px;color:#111111;" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={s.icono}/>
               </svg>
             </div>
-            <h3 style="font-family:'Archivo Black',sans-serif;font-size:1.1rem;font-weight:900;color:#111111;margin-bottom:12px;">{s.titulo}</h3>
-            <p style="color:#64748b;font-size:0.9rem;line-height:1.6;font-family:system-ui,sans-serif;">{s.descripcion}</p>
+            <h3 style="font-family:'Bebas Neue',sans-serif;font-size:1.6rem;color:#F0F0F0;margin-bottom:12px;letter-spacing:0.04em;">{s.titulo}</h3>
+            <p style="color:#9ca3af;font-size:0.95rem;line-height:1.6;font-family:'Barlow Condensed',sans-serif;font-weight:400;">{s.descripcion}</p>
           </div>
         ))}
       </div>
-      <div style="text-align:center;margin-top:40px;">
-        <a href="/servicios/" style="padding:14px 36px;background:transparent;color:#F5A623;font-family:'Archivo Black',sans-serif;font-size:0.9rem;text-decoration:none;border-radius:4px;border:2px solid #F5A623;text-transform:uppercase;letter-spacing:0.08em;font-weight:900;transition:all 0.15s;display:inline-block;" onmouseover="this.style.background='#F5A623';this.style.color='#111111'" onmouseout="this.style.background='transparent';this.style.color='#F5A623'">
-          Ver todos los servicios
+      <div style="text-align:center;margin-top:48px;">
+        <a href="/servicios/" style="padding:16px 48px;background:transparent;color:#F5A623;font-family:'Barlow Condensed',sans-serif;font-size:1.05rem;font-weight:700;text-decoration:none;border-radius:2px;border:2px solid #F5A623;text-transform:uppercase;letter-spacing:0.12em;transition:all 0.15s;display:inline-block;" onmouseover="this.style.background='#F5A623';this.style.color='#111111'" onmouseout="this.style.background='transparent';this.style.color='#F5A623'">
+          Ver todos los servicios →
         </a>
       </div>
     </div>
   </section>
 
-  <!-- Por qué elegirnos -->
-  <section style="padding:80px 0;background:#111111;border-top:3px solid #F5A623;">
-    <div style="max-width:1280px;margin:0 auto;padding:0 24px;">
-      <div style="text-align:center;margin-bottom:48px;">
-        <div style="display:inline-block;background:#F5A623;color:#111111;font-family:'Archivo Black',sans-serif;font-size:0.7rem;text-transform:uppercase;letter-spacing:0.15em;padding:6px 14px;margin-bottom:16px;">Por qué elegirnos</div>
-        <h2 style="font-family:'Archivo Black',sans-serif;font-size:clamp(2rem,4vw,3rem);font-weight:900;color:#fff;line-height:1.1;letter-spacing:-0.02em;">¿Por Qué Elegirnos?</h2>
+  <!-- POR QUÉ ELEGIRNOS — darker surface -->
+  <section style="padding:96px 0;background:#242424;border-top:1px solid #333;">
+    <div style="max-width:1280px;margin:0 auto;padding:0 40px;">
+      <div style="text-align:center;margin-bottom:56px;">
+        <div style="display:inline-block;background:#F5A623;color:#111111;font-family:'Barlow Condensed',sans-serif;font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.2em;padding:6px 16px;margin-bottom:16px;">Por qué elegirnos</div>
+        <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(2.5rem,5vw,5rem);color:#F0F0F0;line-height:1.0;letter-spacing:0.04em;">¿Por Qué Elegirnos?</h2>
+        <div style="width:80px;height:3px;background:#F5A623;margin:16px auto 0;"></div>
       </div>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:32px;">
-        <div style="text-align:center;">
-          <div style="width:64px;height:64px;background:#F5A623;border-radius:4px;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;">
-            <svg xmlns="http://www.w3.org/2000/svg" style="height:32px;width:32px;color:#111111;" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        {[
+          {icono: 'M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z', titulo: 'Rapidez', texto: 'Diagnósticos rápidos y reparaciones eficientes para que recuperes tu vehículo cuanto antes.'},
+          {icono: 'M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z', titulo: 'Confianza', texto: 'Presupuestos sin compromiso y total transparencia en cada reparación que realizamos.'},
+          {icono: 'M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z', titulo: 'Tecnología', texto: 'Equipos de diagnóstico de última generación para identificar y solucionar cualquier avería.'},
+        ].map(item => (
+          <div style="text-align:center;padding:40px 24px;background:#1A1A1A;border-top:3px solid #F5A623;border-radius:2px;transition:transform 0.2s;" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform='translateY(0)'">
+            <div style="width:64px;height:64px;background:#F5A623;border-radius:2px;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;">
+              <svg xmlns="http://www.w3.org/2000/svg" style="height:32px;width:32px;color:#111111;" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={item.icono}/>
+              </svg>
+            </div>
+            <h3 style="font-family:'Bebas Neue',sans-serif;font-size:1.8rem;color:#F0F0F0;margin-bottom:12px;letter-spacing:0.04em;">{item.titulo}</h3>
+            <p style="color:#9ca3af;font-size:0.95rem;line-height:1.6;font-family:'Barlow Condensed',sans-serif;">{item.texto}</p>
           </div>
-          <h3 style="font-family:'Archivo Black',sans-serif;font-size:1.25rem;font-weight:900;color:#fff;margin-bottom:12px;">Rapidez</h3>
-          <p style="color:#9ca3af;font-size:0.9rem;line-height:1.6;font-family:system-ui,sans-serif;">Diagnósticos rápidos y reparaciones eficientes para que recuperes tu vehículo cuanto antes.</p>
-        </div>
-        <div style="text-align:center;">
-          <div style="width:64px;height:64px;background:#F5A623;border-radius:4px;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;">
-            <svg xmlns="http://www.w3.org/2000/svg" style="height:32px;width:32px;color:#111111;" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-          </div>
-          <h3 style="font-family:'Archivo Black',sans-serif;font-size:1.25rem;font-weight:900;color:#fff;margin-bottom:12px;">Confianza</h3>
-          <p style="color:#9ca3af;font-size:0.9rem;line-height:1.6;font-family:system-ui,sans-serif;">Presupuestos sin compromiso y total transparencia en cada reparación que realizamos.</p>
-        </div>
-        <div style="text-align:center;">
-          <div style="width:64px;height:64px;background:#F5A623;border-radius:4px;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;">
-            <svg xmlns="http://www.w3.org/2000/svg" style="height:32px;width:32px;color:#111111;" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
-          </div>
-          <h3 style="font-family:'Archivo Black',sans-serif;font-size:1.25rem;font-weight:900;color:#fff;margin-bottom:12px;">Tecnología</h3>
-          <p style="color:#9ca3af;font-size:0.9rem;line-height:1.6;font-family:system-ui,sans-serif;">Equipos de diagnóstico de última generación para identificar y solucionar cualquier avería.</p>
-        </div>
+        ))}
       </div>
     </div>
   </section>
 
   <!-- CTA -->
-  <section style="padding:80px 0;background:#fff;border-top:3px solid #F5A623;">
-    <div style="max-width:768px;margin:0 auto;padding:0 24px;text-align:center;">
-      <h2 style="font-family:'Archivo Black',sans-serif;font-size:clamp(2rem,4vw,3rem);font-weight:900;color:#111111;margin-bottom:16px;letter-spacing:-0.02em;">¿Necesitas una revisión?</h2>
-      <p style="color:#64748b;font-size:1.1rem;margin-bottom:32px;font-family:system-ui,sans-serif;">Pide tu cita ahora y te atenderemos lo antes posible. Presupuesto sin compromiso.</p>
+  <section style="padding:96px 0;background:#1A1A1A;border-top:3px solid #F5A623;">
+    <div style="max-width:768px;margin:0 auto;padding:0 40px;text-align:center;">
+      <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(2.5rem,5vw,5rem);color:#F0F0F0;margin-bottom:8px;letter-spacing:0.04em;">¿Necesitas una revisión?</h2>
+      <div style="width:80px;height:3px;background:#F5A623;margin:0 auto 24px;"></div>
+      <p style="color:#9ca3af;font-size:1.1rem;margin-bottom:40px;font-family:'Barlow Condensed',sans-serif;letter-spacing:0.02em;">Pide tu cita ahora y te atenderemos lo antes posible. Presupuesto sin compromiso.</p>
       <div style="display:flex;flex-wrap:wrap;gap:16px;justify-content:center;">
-        <a href="/contacto/" style="padding:16px 40px;background:#F5A623;color:#111111;font-family:'Archivo Black',sans-serif;font-size:1rem;text-decoration:none;border-radius:4px;text-transform:uppercase;letter-spacing:0.08em;font-weight:900;transition:background 0.15s;box-shadow:4px 4px 0 #c97d10;" onmouseover="this.style.background='#c97d10'" onmouseout="this.style.background='#F5A623'">
+        <a href="/contacto/" style="padding:16px 44px;background:#F5A623;color:#111111;font-family:'Barlow Condensed',sans-serif;font-size:1.1rem;font-weight:700;text-decoration:none;border-radius:2px;text-transform:uppercase;letter-spacing:0.1em;transition:background 0.15s,transform 0.15s;" onmouseover="this.style.background='#c97d10';this.style.transform='translateY(-2px)'" onmouseout="this.style.background='#F5A623';this.style.transform='translateY(0)'">
           Solicitar Cita
         </a>
-        <a href="https://wa.me/34971906236" target="_blank" rel="noopener noreferrer" style="padding:16px 40px;background:#25d366;color:#fff;font-family:'Archivo Black',sans-serif;font-size:1rem;text-decoration:none;border-radius:4px;text-transform:uppercase;letter-spacing:0.08em;font-weight:900;transition:background 0.15s;box-shadow:4px 4px 0 #1da851;" onmouseover="this.style.background='#1da851'" onmouseout="this.style.background='#25d366'">
+        <a href="https://wa.me/34971906236" target="_blank" rel="noopener noreferrer" style="padding:16px 44px;background:#25d366;color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:1.1rem;font-weight:700;text-decoration:none;border-radius:2px;text-transform:uppercase;letter-spacing:0.1em;transition:background 0.15s,transform 0.15s;" onmouseover="this.style.background='#1da851';this.style.transform='translateY(-2px)'" onmouseout="this.style.background='#25d366';this.style.transform='translateY(0)'">
           WhatsApp
         </a>
       </div>
