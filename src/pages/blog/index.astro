@@ -1,0 +1,65 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const articulos = [
+  {
+    slug: 'cuando-cambiar-bujias',
+    titulo: '¿Cuándo cambiar las bujías de tu coche?',
+    resumen: 'Descubre las señales que indican que es hora de cambiar las bujías y por qué es importante para el rendimiento de tu motor.',
+    fecha: '15 de marzo de 2026',
+  },
+  {
+    slug: 'sintomas-alternador-averiado',
+    titulo: 'Síntomas de un alternador averiado',
+    resumen: 'Aprende a identificar los síntomas más comunes de un alternador en mal estado antes de que te deje tirado.',
+    fecha: '10 de marzo de 2026',
+  },
+  {
+    slug: 'que-es-diagnosis-electronica',
+    titulo: '¿Qué es la diagnosis electrónica del automóvil?',
+    resumen: 'Te explicamos en qué consiste la diagnosis electrónica, cómo funciona y por qué es fundamental para el mantenimiento moderno.',
+    fecha: '5 de marzo de 2026',
+  },
+  {
+    slug: 'cuando-pasar-itv',
+    titulo: '¿Cuándo hay que pasar la ITV? Guía completa',
+    resumen: 'Todo lo que necesitas saber sobre los plazos de la ITV, qué se revisa y cómo preparar tu vehículo.',
+    fecha: '28 de febrero de 2026',
+  },
+  {
+    slug: 'mantenimiento-preventivo-basico',
+    titulo: 'Mantenimiento preventivo básico: guía para conductores',
+    resumen: 'Las revisiones básicas que puedes hacer para alargar la vida de tu vehículo y evitar averías costosas.',
+    fecha: '20 de febrero de 2026',
+  },
+];
+---
+
+<Layout title="Blog - Consejos de Electromecánica" description="Blog de Electromecánica Eprom. Consejos sobre mantenimiento del automóvil, diagnóstico electrónico, ITV y más. Taller en Palma de Mallorca.">
+  <!-- Header -->
+  <section class="bg-primary-dark text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Blog</h1>
+      <p class="text-neutral-200 text-lg max-w-2xl">Consejos y guías sobre mantenimiento, averías y todo lo que necesitas saber sobre tu vehículo.</p>
+    </div>
+  </section>
+
+  <!-- Articles -->
+  <section class="py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      {articulos.map(a => (
+        <article class="bg-white border border-neutral-200 rounded-xl p-6 hover:shadow-md transition-shadow">
+          <a href={`/blog/${a.slug}/`} class="block">
+            <time class="text-sm text-neutral-400">{a.fecha}</time>
+            <h2 class="text-xl font-bold text-primary-dark mt-1 mb-2 hover:text-accent transition-colors">{a.titulo}</h2>
+            <p class="text-neutral-600 leading-relaxed">{a.resumen}</p>
+            <span class="inline-flex items-center text-sm text-primary font-semibold mt-3 hover:text-accent transition-colors">
+              Leer más
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+            </span>
+          </a>
+        </article>
+      ))}
+    </div>
+  </section>
+</Layout>

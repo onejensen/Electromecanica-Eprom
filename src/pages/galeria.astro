@@ -1,0 +1,49 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const imagenes = [
+  { alt: 'Taller electromecánica Eprom - Zona de trabajo principal', color: 'from-primary to-primary-light' },
+  { alt: 'Diagnóstico electrónico con equipos de última generación', color: 'from-primary-dark to-primary' },
+  { alt: 'Trabajos de electricidad del automóvil en Palma', color: 'from-accent-dark to-accent' },
+  { alt: 'Reparación de motor en taller Eprom Mallorca', color: 'from-primary-light to-accent' },
+  { alt: 'Equipo de mecánicos profesionales en Palma', color: 'from-primary to-primary-dark' },
+  { alt: 'Herramientas especializadas de electromecánica', color: 'from-accent to-primary' },
+  { alt: 'Revisión de sistema de frenos en taller Eprom', color: 'from-primary-dark to-accent-dark' },
+  { alt: 'Mantenimiento preventivo de vehículos en Mallorca', color: 'from-primary to-accent' },
+  { alt: 'Reparación del sistema eléctrico del coche', color: 'from-accent-dark to-primary-light' },
+];
+---
+
+<Layout title="Galería de Trabajos" description="Galería de trabajos realizados en Electromecánica Eprom. Taller de electromecánica en Palma de Mallorca especializado en diagnóstico y reparación.">
+  <!-- Header -->
+  <section class="bg-primary-dark text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Galería</h1>
+      <p class="text-neutral-200 text-lg max-w-2xl">Conoce nuestras instalaciones y algunos de los trabajos que realizamos en nuestro taller de electromecánica en Palma.</p>
+    </div>
+  </section>
+
+  <!-- Gallery Grid -->
+  <section class="py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {imagenes.map((img) => (
+          <div class="group relative aspect-[4/3] rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
+            <div class={`absolute inset-0 bg-gradient-to-br ${img.color} opacity-80`}></div>
+            <div class="absolute inset-0 flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-white/30" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+              </svg>
+            </div>
+            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
+              <p class="text-white text-sm font-medium">{img.alt}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+      <div class="mt-12 text-center">
+        <p class="text-neutral-500 text-sm">Las imágenes de esta galería son placeholders. Sustituye por fotografías reales del taller y trabajos realizados.</p>
+      </div>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,100 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  ogImage?: string;
+}
+
+const {
+  title,
+  description,
+  canonical = Astro.url.href,
+  ogImage = '/og-image.jpg',
+} = Astro.props;
+
+const siteName = 'Electromecánica Eprom';
+const fullTitle = title === siteName ? title : `${title} | ${siteName}`;
+---
+
+<!-- Primary Meta Tags -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>{fullTitle}</title>
+<meta name="description" content={description} />
+<meta name="keywords" content="taller electromecánica Palma, electricidad coche Mallorca, diagnóstico avería Palma, mecánico Palma, reparación motor Mallorca, mantenimiento coche Palma" />
+<link rel="canonical" href={canonical} />
+<meta name="robots" content="index, follow" />
+<meta name="language" content="es" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content={canonical} />
+<meta property="og:title" content={fullTitle} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={ogImage} />
+<meta property="og:locale" content="es_ES" />
+<meta property="og:site_name" content={siteName} />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={fullTitle} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={ogImage} />
+
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+<!-- LocalBusiness Schema.org JSON-LD -->
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "AutoRepair",
+  "name": "Electromecánica Eprom",
+  "image": ogImage,
+  "url": "https://electromecanicaeprom.es",
+  "telephone": "+34971906236",
+  "email": "electromecanicaeprom@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Joan Fuster i Ortells, 24",
+    "addressLocality": "Palma",
+    "postalCode": "07010",
+    "addressRegion": "Mallorca",
+    "addressCountry": "ES"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 39.5833,
+    "longitude": 2.6253
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "08:30",
+      "closes": "13:30"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "15:00",
+      "closes": "19:00"
+    }
+  ],
+  "priceRange": "$$",
+  "areaServed": {
+    "@type": "City",
+    "name": "Palma de Mallorca"
+  },
+  "description": "Taller de electromecánica en Palma de Mallorca. Diagnóstico electrónico, electricidad del automóvil, mantenimiento preventivo y reparación de motores.",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Servicios de electromecánica",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Diagnóstico electrónico" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Electricidad del automóvil" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Mantenimiento preventivo" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Reparación de motores" } }
+    ]
+  }
+})} />
