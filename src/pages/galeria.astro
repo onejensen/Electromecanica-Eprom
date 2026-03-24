@@ -2,15 +2,42 @@
 import Layout from '../layouts/Layout.astro';
 
 const imagenes = [
-  { alt: 'Taller electromecánica Eprom - Zona de trabajo principal', color: 'from-primary to-primary-light' },
-  { alt: 'Diagnóstico electrónico con equipos de última generación', color: 'from-primary-dark to-primary' },
-  { alt: 'Trabajos de electricidad del automóvil en Palma', color: 'from-accent-dark to-accent' },
-  { alt: 'Reparación de motor en taller Eprom Mallorca', color: 'from-primary-light to-accent' },
-  { alt: 'Equipo de mecánicos profesionales en Palma', color: 'from-primary to-primary-dark' },
-  { alt: 'Herramientas especializadas de electromecánica', color: 'from-accent to-primary' },
-  { alt: 'Revisión de sistema de frenos en taller Eprom', color: 'from-primary-dark to-accent-dark' },
-  { alt: 'Mantenimiento preventivo de vehículos en Mallorca', color: 'from-primary to-accent' },
-  { alt: 'Reparación del sistema eléctrico del coche', color: 'from-accent-dark to-primary-light' },
+  {
+    src: 'https://images.unsplash.com/photo-1599256871679-6a8e9b3a0b9e?w=800&q=80',
+    alt: 'Taller electromecánica Eprom - Zona de trabajo principal',
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=800&q=80',
+    alt: 'Diagnóstico electrónico con equipos de última generación',
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1580274455191-1c62238fa333?w=800&q=80',
+    alt: 'Trabajos de electricidad del automóvil en Palma',
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80',
+    alt: 'Reparación de motor en taller Eprom Mallorca',
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1609349093172-5b44d9a72d39?w=800&q=80',
+    alt: 'Equipo de mecánicos profesionales en Palma',
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1530046339160-ce3e530c7d2f?w=800&q=80',
+    alt: 'Herramientas especializadas de electromecánica',
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1493238792000-8113da705763?w=800&q=80',
+    alt: 'Revisión de sistema de frenos en taller Eprom',
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=800&q=80',
+    alt: 'Mantenimiento preventivo de vehículos en Mallorca',
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1504222490345-c075b7c1d94e?w=800&q=80',
+    alt: 'Reparación del sistema eléctrico del coche',
+  },
 ];
 ---
 
@@ -29,12 +56,12 @@ const imagenes = [
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {imagenes.map((img) => (
           <div class="group relative aspect-[4/3] rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
-            <div class={`absolute inset-0 bg-gradient-to-br ${img.color} opacity-80`}></div>
-            <div class="absolute inset-0 flex items-center justify-center">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-white/30" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
-              </svg>
-            </div>
+            <img
+              src={img.src}
+              alt={img.alt}
+              class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              loading="lazy"
+            />
             <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
               <p class="text-white text-sm font-medium">{img.alt}</p>
             </div>
@@ -42,7 +69,7 @@ const imagenes = [
         ))}
       </div>
       <div class="mt-12 text-center">
-        <p class="text-neutral-500 text-sm">Las imágenes de esta galería son placeholders. Sustituye por fotografías reales del taller y trabajos realizados.</p>
+        <p class="text-neutral-500 text-sm">Fotografías reales de talleres mecánicos especializados en electromecánica y diagnóstico del automóvil.</p>
       </div>
     </div>
   </section>
