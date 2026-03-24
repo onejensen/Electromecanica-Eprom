@@ -4,7 +4,7 @@
   --color-primary: #3a3a3a;
   --color-primary-light: #555555;
   --color-primary-dark: #222222;
-  --color-accent: #e8941a;
+  --color-accent: #F5A623;
   --color-accent-light: #F5A623;
   --color-accent-dark: #c97d10;
   --color-neutral-50: #f8fafc;
@@ -25,6 +25,6 @@ html {
 }
 
 body {
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
   color: var(--color-neutral-800);
 }
