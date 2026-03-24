@@ -1,11 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=JetBrains+Mono:wght@400;700&display=swap');
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #3a3a3a;
-  --color-primary-light: #555555;
-  --color-primary-dark: #222222;
+  --color-primary: #F5A623;
+  --color-primary-light: #f7b94d;
+  --color-primary-dark: #c97d10;
   --color-accent: #F5A623;
-  --color-accent-light: #F5A623;
+  --color-accent-light: #f7b94d;
   --color-accent-dark: #c97d10;
   --color-neutral-50: #f8fafc;
   --color-neutral-100: #f1f5f9;
@@ -17,7 +18,7 @@
   --color-neutral-700: #334155;
   --color-neutral-800: #1e293b;
   --color-neutral-900: #0f172a;
-  --color-section-dark: #555555;
+  --color-section-dark: #222222;
 }
 
 html {
@@ -25,6 +26,61 @@ html {
 }
 
 body {
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  color: var(--color-neutral-800);
+  font-family: 'Archivo Black', 'Inter', system-ui, -apple-system, sans-serif;
+  color: #111827;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Archivo Black', system-ui, -apple-system, sans-serif;
+  font-weight: 900;
+}
+
+/* Bold typography scale */
+h1 { font-size: clamp(2.5rem, 6vw, 5rem); line-height: 1.05; letter-spacing: -0.02em; }
+h2 { font-size: clamp(2rem, 4vw, 3.5rem); line-height: 1.1; letter-spacing: -0.01em; }
+h3 { font-size: clamp(1.25rem, 2.5vw, 1.75rem); line-height: 1.2; }
+
+/* Bold utility classes */
+.accent-text { color: #F5A623; }
+.accent-bg { background-color: #F5A623; }
+.bold-label {
+  display: inline-block;
+  background: #F5A623;
+  color: #111111;
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  padding: 6px 14px;
+}
+
+/* Bold button */
+.btn-bold {
+  background: #F5A623;
+  color: #111111;
+  font-family: 'Archivo Black', sans-serif;
+  font-weight: 900;
+  padding: 14px 32px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.15s ease;
+  text-decoration: none;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.btn-bold:hover { background: #c97d10; }
+
+/* Bold card */
+.bold-card {
+  background: #fff;
+  border: 2px solid #e2e8f0;
+  border-radius: 4px;
+  box-shadow: 4px 4px 0 transparent;
+  transition: all 0.15s;
+}
+.bold-card:hover {
+  border-color: #F5A623;
+  box-shadow: 4px 4px 0 #F5A623;
 }
