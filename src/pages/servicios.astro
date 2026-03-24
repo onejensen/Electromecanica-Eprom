@@ -4,36 +4,42 @@ import Layout from '../layouts/Layout.astro';
 const servicios = [
   {
     titulo: 'Diagnóstico Electrónico',
+    imagen: 'https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=800&auto=format&fit=crop',
     descripcion: 'Utilizamos equipos de diagnóstico de última generación para leer y analizar los códigos de error de tu vehículo. Nuestro sistema permite identificar con precisión el origen de cualquier avería electrónica, ahorrando tiempo y costes innecesarios.',
     detalles: ['Lectura y borrado de códigos de avería (OBD-II)', 'Diagnóstico multimarca', 'Análisis de sensores y actuadores', 'Reprogramación de centralitas', 'Comprobación de sistemas electrónicos'],
     icono: 'M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z',
   },
   {
     titulo: 'Electricidad del Automóvil',
+    imagen: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&auto=format&fit=crop',
     descripcion: 'Somos especialistas en todos los sistemas eléctricos del vehículo. Desde la reparación del alternador hasta la instalación de accesorios eléctricos, nuestro equipo resuelve cualquier problema eléctrico.',
     detalles: ['Reparación de alternador y motor de arranque', 'Sistemas de iluminación y señalización', 'Instalación de accesorios eléctricos', 'Reparación de cableado', 'Sistemas de carga de batería', 'Cuadro de instrumentos'],
     icono: 'M13 10V3L4 14h7v7l9-11h-7z',
   },
   {
     titulo: 'Mantenimiento Preventivo',
+    imagen: 'https://images.unsplash.com/photo-1611161512722-ee6b8d748c9e?w=800&auto=format&fit=crop',
     descripcion: 'El mantenimiento regular es clave para evitar averías costosas y alargar la vida útil de tu vehículo. Realizamos revisiones completas siguiendo las recomendaciones del fabricante.',
     detalles: ['Cambio de aceite y filtros', 'Revisión de frenos', 'Control de niveles', 'Revisión de suspensión y dirección', 'Cambio de correa de distribución', 'Pre-ITV'],
     icono: 'M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z',
   },
   {
     titulo: 'Reparación de Motores',
+    imagen: 'https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=800&auto=format&fit=crop',
     descripcion: 'Nuestro equipo de mecánicos cualificados realiza reparaciones completas en motores gasolina y diésel. Desde pequeñas reparaciones hasta reconstrucciones completas.',
     detalles: ['Distribución y calado de motor', 'Junta de culata', 'Turbocompresor', 'Sistema de inyección', 'Embrague y caja de cambios', 'Sistema de refrigeración'],
     icono: 'M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z M15 12a3 3 0 11-6 0 3 3 0 016 0z',
   },
   {
     titulo: 'Aire Acondicionado',
+    imagen: 'https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=800&auto=format&fit=crop',
     descripcion: 'Servicio completo de climatización del vehículo. Recarga de gas, detección de fugas y reparación de componentes del sistema de aire acondicionado.',
     detalles: ['Recarga de gas refrigerante', 'Detección y reparación de fugas', 'Sustitución de compresor', 'Limpieza del circuito', 'Cambio de filtro de habitáculo'],
     icono: 'M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4',
   },
   {
     titulo: 'Sistemas de Frenado',
+    imagen: 'https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&auto=format&fit=crop',
     descripcion: 'La seguridad es lo primero. Revisamos y reparamos todo el sistema de frenado: pastillas, discos, líquido de frenos, ABS y sistemas de asistencia a la frenada.',
     detalles: ['Cambio de pastillas y discos', 'Purgado del sistema de frenos', 'Reparación de ABS', 'Freno de mano', 'Latiguillos y manguitos', 'Bombines y cilindros'],
     icono: 'M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z',
@@ -54,14 +60,17 @@ const servicios = [
   <section class="py-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
       {servicios.map((s, i) => (
-        <div class:list={['flex flex-col md:flex-row gap-8 items-start p-8 rounded-xl', i % 2 === 0 ? 'bg-neutral-50' : 'bg-white']}>
-          <div class="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center shrink-0">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={s.icono}/>
-            </svg>
-          </div>
-          <div class="flex-1">
-            <h2 class="text-2xl font-bold text-primary-dark mb-3">{s.titulo}</h2>
+        <div class:list={['flex flex-col md:flex-row gap-8 items-start rounded-xl overflow-hidden', i % 2 === 0 ? 'bg-neutral-50' : 'bg-white']}>
+          <img src={s.imagen} alt={s.titulo} style="width:100%;max-width:320px;height:220px;object-fit:cover;border-radius:8px 0 0 8px;flex-shrink:0;" />
+          <div class="flex-1 p-8">
+            <div class="flex items-center gap-4 mb-3">
+              <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={s.icono}/>
+                </svg>
+              </div>
+              <h2 class="text-2xl font-bold text-primary-dark">{s.titulo}</h2>
+            </div>
             <p class="text-neutral-600 mb-4 leading-relaxed">{s.descripcion}</p>
             <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2">
               {s.detalles.map(d => (

@@ -4,6 +4,8 @@ import tailwindcss from '@tailwindcss/vite';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
+  site: "https://onejensen.github.io",
+  base: "/Electromecanica-Eprom",
   site: 'https://electromecanicaeprom.es',
   integrations: [sitemap()],
   vite: {
