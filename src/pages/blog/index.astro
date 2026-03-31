@@ -37,25 +37,27 @@ const articulos = [
 
 <Layout title="Blog - Consejos de Electromecánica" description="Blog de Electromecánica Eprom. Consejos sobre mantenimiento del automóvil, diagnóstico electrónico, ITV y más. Taller en Palma de Mallorca.">
   <!-- Header -->
-  <section class="bg-primary-dark text-white py-16">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h1 class="text-4xl md:text-5xl font-bold mb-4">Blog</h1>
-      <p class="text-neutral-200 text-lg max-w-2xl">Consejos y guías sobre mantenimiento, averías y todo lo que necesitas saber sobre tu vehículo.</p>
+  <section style="background:#1A1A1A;padding:80px 0 48px;position:relative;border-bottom:3px solid #F5A623;">
+    <div style="max-width:1280px;margin:0 auto;padding:0 24px;">
+      <div style="display:inline-block;background:#F5A623;color:#111111;font-family:'Barlow Condensed',sans-serif;font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.2em;padding:6px 16px;margin-bottom:16px;">Blog</div>
+      <h1 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(2.5rem,5vw,5rem);color:#F0F0F0;line-height:1.0;letter-spacing:0.04em;">Consejos y Guías</h1>
+      <div style="width:80px;height:3px;background:#F5A623;margin-top:16px;"></div>
+      <p style="color:#9ca3af;margin-top:16px;max-width:600px;font-family:'Barlow Condensed',sans-serif;font-size:1.1rem;letter-spacing:0.02em;">Consejos y guías sobre mantenimiento, averías y todo lo que necesitas saber sobre tu vehículo.</p>
     </div>
   </section>
 
   <!-- Articles -->
-  <section class="py-16">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
-      {articulos.map(a => (
-        <article class="bg-white border border-neutral-200 rounded-xl p-6 hover:shadow-md transition-shadow">
-          <a href={`/blog/${a.slug}/`} class="block">
-            <time class="text-sm text-neutral-400">{a.fecha}</time>
-            <h2 class="text-xl font-bold text-primary-dark mt-1 mb-2 hover:text-accent transition-colors">{a.titulo}</h2>
-            <p class="text-neutral-600 leading-relaxed">{a.resumen}</p>
-            <span class="inline-flex items-center text-sm text-primary font-semibold mt-3 hover:text-accent transition-colors">
+  <section style="padding:64px 0;background:#1A1A1A;">
+    <div style="max-width:900px;margin:0 auto;padding:0 24px;display:flex;flex-direction:column;gap:16px;">
+      {articulos.map((a, i) => (
+        <article style={`background:#242424;border-top:3px solid #F5A623;border-left:1px solid #333;border-right:1px solid #333;border-bottom:1px solid #333;border-radius:2px;padding:28px 32px;transition:transform 0.2s,box-shadow 0.2s;animation:fadeInUp 0.6s ease-out ${(i*0.1)+0.1}s both;`} class="service-card-3d">
+          <a href={`${import.meta.env.BASE_URL}blog/${a.slug}/`} style="text-decoration:none;display:block;">
+            <time style="font-size:0.8rem;color:#666;font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:0.08em;">{a.fecha}</time>
+            <h2 style="font-family:'Bebas Neue',sans-serif;font-size:1.8rem;color:#F0F0F0;letter-spacing:0.04em;margin:8px 0 12px;line-height:1.1;">{a.titulo}</h2>
+            <p style="color:#9ca3af;font-family:'Barlow Condensed',sans-serif;font-size:1rem;line-height:1.6;">{a.resumen}</p>
+            <span style="display:inline-flex;align-items:center;gap:6px;margin-top:16px;color:#F5A623;font-family:'Barlow Condensed',sans-serif;font-size:0.9rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;">
               Leer más
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" style="height:16px;width:16px;" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
             </span>
           </a>
         </article>

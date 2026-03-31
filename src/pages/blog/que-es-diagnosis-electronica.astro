@@ -5,7 +5,7 @@ import Layout from '../../layouts/Layout.astro';
 <Layout title="¿Qué es la diagnosis electrónica?" description="Descubre qué es la diagnosis electrónica del automóvil, cómo funciona el sistema OBD-II y por qué es clave para el mantenimiento. Taller en Palma.">
   <article class="py-16">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-      <a href="/blog/" class="text-primary hover:text-accent text-sm font-medium transition-colors">&larr; Volver al blog</a>
+      <a href={`${import.meta.env.BASE_URL}blog/`} class="text-primary hover:text-accent text-sm font-medium transition-colors">&larr; Volver al blog</a>
       <time class="block text-sm text-neutral-400 mt-4">5 de marzo de 2026</time>
       <h1 class="text-3xl md:text-4xl font-bold text-primary-dark mt-2 mb-8">¿Qué es la diagnosis electrónica del automóvil?</h1>
 
@@ -44,9 +44,9 @@ import Layout from '../../layouts/Layout.astro';
         <p>En <strong>Electromecánica Eprom</strong> contamos con equipos de diagnóstico multimarca de última generación. Nuestros técnicos están formados para interpretar los datos y ofrecerte la solución más adecuada para tu vehículo.</p>
       </div>
 
-      <div class="mt-12 bg-neutral-50 rounded-xl p-6 text-center">
+      <div class="mt-12 blog-cta rounded-xl p-6 text-center">
         <p class="text-neutral-600 mb-4">¿Se ha encendido el testigo de avería de tu coche?</p>
-        <a href="/contacto/" class="inline-flex items-center justify-center bg-accent hover:bg-accent-dark text-white font-semibold px-6 py-3 rounded-lg transition-colors">Pide tu diagnóstico</a>
+        <a href={`${import.meta.env.BASE_URL}contacto/`} class="inline-flex items-center justify-center bg-accent hover:bg-accent-dark text-white font-semibold px-6 py-3 rounded-lg transition-colors">Pide tu diagnóstico</a>
       </div>
     </div>
   </article>

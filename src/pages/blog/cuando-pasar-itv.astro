@@ -5,7 +5,7 @@ import Layout from '../../layouts/Layout.astro';
 <Layout title="¿Cuándo pasar la ITV? Guía completa" description="Guía completa sobre la ITV: plazos según antigüedad, qué se revisa y cómo preparar tu vehículo. Servicio pre-ITV en Palma de Mallorca.">
   <article class="py-16">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-      <a href="/blog/" class="text-primary hover:text-accent text-sm font-medium transition-colors">&larr; Volver al blog</a>
+      <a href={`${import.meta.env.BASE_URL}blog/`} class="text-primary hover:text-accent text-sm font-medium transition-colors">&larr; Volver al blog</a>
       <time class="block text-sm text-neutral-400 mt-4">28 de febrero de 2026</time>
       <h1 class="text-3xl md:text-4xl font-bold text-primary-dark mt-2 mb-8">¿Cuándo hay que pasar la ITV? Guía completa</h1>
 
@@ -55,9 +55,9 @@ import Layout from '../../layouts/Layout.astro';
         <p>En nuestro taller de Palma realizamos una <strong>revisión pre-ITV completa</strong> para asegurarnos de que tu vehículo está en perfectas condiciones. Revisamos todos los puntos que se inspeccionan en la ITV y corregimos cualquier deficiencia antes de la cita.</p>
       </div>
 
-      <div class="mt-12 bg-neutral-50 rounded-xl p-6 text-center">
+      <div class="mt-12 blog-cta rounded-xl p-6 text-center">
         <p class="text-neutral-600 mb-4">¿Tienes que pasar la ITV próximamente?</p>
-        <a href="/contacto/" class="inline-flex items-center justify-center bg-accent hover:bg-accent-dark text-white font-semibold px-6 py-3 rounded-lg transition-colors">Pide tu pre-ITV</a>
+        <a href={`${import.meta.env.BASE_URL}contacto/`} class="inline-flex items-center justify-center bg-accent hover:bg-accent-dark text-white font-semibold px-6 py-3 rounded-lg transition-colors">Pide tu pre-ITV</a>
       </div>
     </div>
   </article>

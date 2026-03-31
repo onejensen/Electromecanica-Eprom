@@ -1,18 +1,19 @@
 ---
 const currentPath = Astro.url.pathname;
+const base = import.meta.env.BASE_URL;
 const links = [
-  { href: '/', label: 'Inicio' },
-  { href: '/servicios/', label: 'Servicios' },
-  { href: '/galeria/', label: 'Galería' },
-  { href: '/blog/', label: 'Blog' },
-  { href: '/contacto/', label: 'Contacto' },
+  { href: base, label: 'Inicio' },
+  { href: `${base}servicios/`, label: 'Servicios' },
+  { href: `${base}galeria/`, label: 'Galería' },
+  { href: `${base}blog/`, label: 'Blog' },
+  { href: `${base}contacto/`, label: 'Contacto' },
 ];
 ---
 
 <nav style="background:#111111;border-bottom:3px solid #F5A623;position:sticky;top:0;z-index:50;">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div style="display:flex;align-items:center;justify-content:space-between;height:72px;">
-      <a href="/" style="display:flex;align-items:center;gap:12px;text-decoration:none;">
+      <a href={`${import.meta.env.BASE_URL}`} style="display:flex;align-items:center;gap:12px;text-decoration:none;">
         <img src={`${import.meta.env.BASE_URL}LOGO_EPROM_.png`} alt="Electromecánica Eprom" style="max-height:52px;width:auto;object-fit:contain;" />
       </a>
 

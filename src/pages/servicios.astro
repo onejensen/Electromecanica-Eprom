@@ -49,33 +49,35 @@ const servicios = [
 
 <Layout title="Servicios de Electromecánica" description="Servicios de electromecánica en Palma de Mallorca: diagnóstico electrónico, electricidad del automóvil, mantenimiento preventivo, reparación de motores y más.">
   <!-- Header -->
-  <section class="bg-primary-dark text-white py-16">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h1 class="text-4xl md:text-5xl font-bold mb-4">Nuestros Servicios</h1>
-      <p class="text-neutral-200 text-lg max-w-2xl">Ofrecemos soluciones completas de electromecánica para todo tipo de vehículos. Calidad, profesionalidad y confianza.</p>
+  <section style="background:#1A1A1A;padding:80px 0 48px;position:relative;border-bottom:3px solid #F5A623;">
+    <div style="max-width:1280px;margin:0 auto;padding:0 24px;">
+      <div style="display:inline-block;background:#F5A623;color:#111111;font-family:'Barlow Condensed',sans-serif;font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.2em;padding:6px 16px;margin-bottom:16px;">Servicios</div>
+      <h1 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(2.5rem,5vw,5rem);color:#F0F0F0;line-height:1.0;letter-spacing:0.04em;">Nuestros Servicios</h1>
+      <div style="width:80px;height:3px;background:#F5A623;margin-top:16px;"></div>
+      <p style="color:#9ca3af;margin-top:16px;max-width:600px;font-family:'Barlow Condensed',sans-serif;font-size:1.1rem;letter-spacing:0.02em;">Ofrecemos soluciones completas de electromecánica para todo tipo de vehículos. Calidad, profesionalidad y confianza.</p>
     </div>
   </section>
 
   <!-- Lista de servicios -->
-  <section class="py-16">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+  <section style="padding:64px 0;background:#1A1A1A;">
+    <div style="max-width:1280px;margin:0 auto;padding:0 24px;display:flex;flex-direction:column;gap:24px;">
       {servicios.map((s, i) => (
-        <div class:list={['flex flex-col md:flex-row gap-8 items-start rounded-xl overflow-hidden', i % 2 === 0 ? 'bg-neutral-50' : 'bg-white']}>
-          <img src={s.imagen} alt={s.titulo} style="width:100%;max-width:320px;height:220px;object-fit:cover;border-radius:8px 0 0 8px;flex-shrink:0;" />
-          <div class="flex-1 p-8">
-            <div class="flex items-center gap-4 mb-3">
-              <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center shrink-0">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <div class="service-detail-card" style={`display:flex;flex-direction:${i % 2 === 0 ? 'row' : 'row-reverse'};gap:0;background:#242424;border-top:3px solid #F5A623;border-left:1px solid #333;border-right:1px solid #333;border-bottom:1px solid #333;border-radius:2px;overflow:hidden;animation:fadeInUp 0.6s ease-out ${(i*0.1)+0.2}s both;`}>
+          <img src={s.imagen} alt={s.titulo} style="width:360px;min-height:280px;object-fit:cover;flex-shrink:0;" class="service-detail-img" />
+          <div style="flex:1;padding:36px 32px;">
+            <div style="display:flex;align-items:center;gap:16px;margin-bottom:16px;">
+              <div style="width:48px;height:48px;background:#F5A623;border-radius:2px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                <svg xmlns="http://www.w3.org/2000/svg" style="height:24px;width:24px;color:#111111;" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={s.icono}/>
                 </svg>
               </div>
-              <h2 class="text-2xl font-bold text-primary-dark">{s.titulo}</h2>
+              <h2 style="font-family:'Bebas Neue',sans-serif;font-size:2rem;color:#F0F0F0;letter-spacing:0.04em;line-height:1;">{s.titulo}</h2>
             </div>
-            <p class="text-neutral-600 mb-4 leading-relaxed">{s.descripcion}</p>
-            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+            <p style="color:#b0b8c1;font-size:1rem;line-height:1.7;font-family:'Barlow Condensed',sans-serif;margin-bottom:20px;">{s.descripcion}</p>
+            <ul style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:8px;">
               {s.detalles.map(d => (
-                <li class="flex items-center gap-2 text-sm text-neutral-600">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-accent shrink-0" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                <li style="display:flex;align-items:center;gap:8px;font-size:0.9rem;color:#9ca3af;font-family:'Barlow Condensed',sans-serif;">
+                  <svg xmlns="http://www.w3.org/2000/svg" style="height:16px;width:16px;color:#F5A623;flex-shrink:0;" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
                   {d}
                 </li>
               ))}
@@ -87,13 +89,26 @@ const servicios = [
   </section>
 
   <!-- CTA -->
-  <section class="bg-primary py-16">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-3xl font-bold text-white mb-4">¿Necesitas alguno de estos servicios?</h2>
-      <p class="text-neutral-200 text-lg mb-8">Contacta con nosotros y te daremos presupuesto sin compromiso.</p>
-      <a href="/contacto/" class="inline-flex items-center justify-center bg-accent hover:bg-accent-dark text-white font-semibold px-8 py-3 rounded-lg transition-colors">
+  <section style="padding:96px 0;background:#242424;border-top:3px solid #F5A623;">
+    <div style="max-width:768px;margin:0 auto;padding:0 24px;text-align:center;">
+      <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(2.5rem,5vw,5rem);color:#F0F0F0;margin-bottom:8px;letter-spacing:0.04em;">¿Necesitas alguno de estos servicios?</h2>
+      <div style="width:80px;height:3px;background:#F5A623;margin:0 auto 24px;"></div>
+      <p style="color:#b0b8c1;font-size:1.1rem;margin-bottom:40px;font-family:'Barlow Condensed',sans-serif;letter-spacing:0.02em;">Contacta con nosotros y te daremos presupuesto sin compromiso.</p>
+      <a href={`${import.meta.env.BASE_URL}contacto/`} style="padding:16px 48px;background:#F5A623;color:#111111;font-family:'Barlow Condensed',sans-serif;font-size:1.1rem;font-weight:700;text-decoration:none;border-radius:2px;text-transform:uppercase;letter-spacing:0.1em;transition:background 0.15s,transform 0.15s;display:inline-block;" onmouseover="this.style.background='#c97d10';this.style.transform='translateY(-2px)'" onmouseout="this.style.background='#F5A623';this.style.transform='translateY(0)'">
         Solicitar Presupuesto
       </a>
     </div>
   </section>
 </Layout>
+
+<style>
+  @media (max-width: 767px) {
+    .service-detail-card {
+      flex-direction: column !important;
+    }
+    .service-detail-img {
+      width: 100% !important;
+      height: 200px !important;
+    }
+  }
+</style>

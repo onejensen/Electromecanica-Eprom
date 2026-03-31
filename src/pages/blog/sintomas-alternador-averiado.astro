@@ -5,7 +5,7 @@ import Layout from '../../layouts/Layout.astro';
 <Layout title="Síntomas de un alternador averiado" description="Aprende a identificar los síntomas de un alternador en mal estado: luces tenues, batería descargada, ruidos extraños. Taller en Palma de Mallorca.">
   <article class="py-16">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-      <a href="/blog/" class="text-primary hover:text-accent text-sm font-medium transition-colors">&larr; Volver al blog</a>
+      <a href={`${import.meta.env.BASE_URL}blog/`} class="text-primary hover:text-accent text-sm font-medium transition-colors">&larr; Volver al blog</a>
       <time class="block text-sm text-neutral-400 mt-4">10 de marzo de 2026</time>
       <h1 class="text-3xl md:text-4xl font-bold text-primary-dark mt-2 mb-8">Síntomas de un alternador averiado</h1>
 
@@ -29,9 +29,9 @@ import Layout from '../../layouts/Layout.astro';
         <p>No esperes a quedarte tirado. Si detectas alguna de estas señales, acude a un taller especializado en electricidad del automóvil. En <strong>Electromecánica Eprom</strong> realizamos pruebas de diagnóstico del sistema de carga y reparamos o sustituimos alternadores de todas las marcas.</p>
       </div>
 
-      <div class="mt-12 bg-neutral-50 rounded-xl p-6 text-center">
+      <div class="mt-12 blog-cta rounded-xl p-6 text-center">
         <p class="text-neutral-600 mb-4">¿Problemas con el alternador de tu coche?</p>
-        <a href="/contacto/" class="inline-flex items-center justify-center bg-accent hover:bg-accent-dark text-white font-semibold px-6 py-3 rounded-lg transition-colors">Pide tu cita</a>
+        <a href={`${import.meta.env.BASE_URL}contacto/`} class="inline-flex items-center justify-center bg-accent hover:bg-accent-dark text-white font-semibold px-6 py-3 rounded-lg transition-colors">Pide tu cita</a>
       </div>
     </div>
   </article>
