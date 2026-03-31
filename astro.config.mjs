@@ -5,8 +5,7 @@ import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
   site: "https://onejensen.github.io",
-  base: "/Electromecanica-Eprom",
-  site: 'https://electromecanicaeprom.es',
+  base: "/Electromecanica-Eprom/",
   integrations: [sitemap()],
   vite: {
     plugins: [tailwindcss()],
