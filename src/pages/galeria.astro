@@ -2,75 +2,56 @@
 import Layout from '../layouts/Layout.astro';
 
 const imagenes = [
-  {
-    src: 'https://images.unsplash.com/photo-1599256871679-6a8e9b3a0b9e?w=800&q=80',
-    alt: 'Taller electromecánica Eprom - Zona de trabajo principal',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=800&q=80',
-    alt: 'Diagnóstico electrónico con equipos de última generación',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1580274455191-1c62238fa333?w=800&q=80',
-    alt: 'Trabajos de electricidad del automóvil en Palma',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80',
-    alt: 'Reparación de motor en taller Eprom Mallorca',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1609349093172-5b44d9a72d39?w=800&q=80',
-    alt: 'Equipo de mecánicos profesionales en Palma',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1530046339160-ce3e530c7d2f?w=800&q=80',
-    alt: 'Herramientas especializadas de electromecánica',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1493238792000-8113da705763?w=800&q=80',
-    alt: 'Revisión de sistema de frenos en taller Eprom',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=800&q=80',
-    alt: 'Mantenimiento preventivo de vehículos en Mallorca',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1504222490345-c075b7c1d94e?w=800&q=80',
-    alt: 'Reparación del sistema eléctrico del coche',
-  },
+  { src: '/galeria/FRS_9654.jpg',  alt: 'Taller Electromecánica Eprom — vista general' },
+  { src: '/galeria/FRS_9697.jpg',  alt: 'Trabajos de mecánica en Eprom Palma' },
+  { src: '/galeria/FRS_9708.jpg',  alt: 'Diagnóstico electrónico en Eprom' },
+  { src: '/galeria/FRS_9712.jpg',  alt: 'Reparación de vehículos en Mallorca' },
+  { src: '/galeria/FRS_9714.jpg',  alt: 'Instalaciones del taller Eprom' },
+  { src: '/galeria/FRS_9726.jpg',  alt: 'Mecánicos trabajando en Eprom' },
+  { src: '/galeria/FRS_9801.jpg',  alt: 'Servicio de electromecánica en Palma' },
 ];
 ---
 
 <Layout title="Galería de Trabajos" description="Galería de trabajos realizados en Electromecánica Eprom. Taller de electromecánica en Palma de Mallorca especializado en diagnóstico y reparación.">
   <!-- Header -->
-  <section class="bg-primary-dark text-white py-16">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h1 class="text-4xl md:text-5xl font-bold mb-4">Galería</h1>
-      <p class="text-neutral-200 text-lg max-w-2xl">Conoce nuestras instalaciones y algunos de los trabajos que realizamos en nuestro taller de electromecánica en Palma.</p>
+  <section style="background:#1A1A1A;padding:80px 0 48px;position:relative;border-bottom:3px solid #F5A623;">
+    <div style="max-width:1280px;margin:0 auto;padding:0 24px;">
+      <div style="display:inline-block;background:#F5A623;color:#111111;font-family:'Barlow Condensed',sans-serif;font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.2em;padding:6px 16px;margin-bottom:16px;">Galería</div>
+      <h1 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(2.5rem,5vw,5rem);color:#F0F0F0;line-height:1.0;letter-spacing:0.04em;">Nuestro Taller</h1>
+      <div style="width:80px;height:3px;background:#F5A623;margin-top:16px;"></div>
+      <p style="color:#9ca3af;margin-top:16px;max-width:600px;font-family:'Barlow Condensed',sans-serif;font-size:1.1rem;letter-spacing:0.02em;">Conoce nuestras instalaciones y algunos de los trabajos que realizamos en nuestro taller de electromecánica en Palma.</p>
     </div>
   </section>
 
   <!-- Gallery Grid -->
-  <section class="py-16">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {imagenes.map((img) => (
-          <div class="group relative aspect-[4/3] rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
+  <section style="padding:64px 0;background:#1A1A1A;">
+    <div style="max-width:1280px;margin:0 auto;padding:0 24px;">
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:16px;">
+        {imagenes.map((img, i) => (
+          <div
+            class="gallery-item"
+            data-index={i}
+            data-src={img.src}
+            style={`position:relative;aspect-ratio:4/3;overflow:hidden;border-radius:2px;border:1px solid #333;animation:fadeInUp 0.6s ease-out ${(i*0.08)+0.1}s both;cursor:pointer;`}
+          >
             <img
               src={img.src}
               alt={img.alt}
-              class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 0.5s ease;"
               loading="lazy"
             />
-            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
-              <p class="text-white text-sm font-medium">{img.alt}</p>
+            <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(0,0,0,0.8) 0%,transparent 100%);padding:20px 16px 16px;">
+              <p style="color:#F0F0F0;font-size:0.85rem;font-family:'Barlow Condensed',sans-serif;font-weight:500;">{img.alt}</p>
             </div>
           </div>
         ))}
       </div>
-      <div class="mt-12 text-center">
-        <p class="text-neutral-500 text-sm">Fotografías reales de talleres mecánicos especializados en electromecánica y diagnóstico del automóvil.</p>
-      </div>
     </div>
   </section>
 </Layout>
+
+<style>
+  .gallery-item:hover img {
+    transform: scale(1.05);
+  }
+</style>
