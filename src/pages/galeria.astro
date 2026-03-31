@@ -1,14 +1,15 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
+const base = import.meta.env.BASE_URL;
 const imagenes = [
-  { src: '/galeria/FRS_9654.jpg',  alt: 'Taller Electromecánica Eprom — vista general' },
-  { src: '/galeria/FRS_9697.jpg',  alt: 'Trabajos de mecánica en Eprom Palma' },
-  { src: '/galeria/FRS_9708.jpg',  alt: 'Diagnóstico electrónico en Eprom' },
-  { src: '/galeria/FRS_9712.jpg',  alt: 'Reparación de vehículos en Mallorca' },
-  { src: '/galeria/FRS_9714.jpg',  alt: 'Instalaciones del taller Eprom' },
-  { src: '/galeria/FRS_9726.jpg',  alt: 'Mecánicos trabajando en Eprom' },
-  { src: '/galeria/FRS_9801.jpg',  alt: 'Servicio de electromecánica en Palma' },
+  { src: `${base}galeria/FRS_9654.jpg`,  alt: 'Taller Electromecánica Eprom — vista general' },
+  { src: `${base}galeria/FRS_9697.jpg`,  alt: 'Trabajos de mecánica en Eprom Palma' },
+  { src: `${base}galeria/FRS_9708.jpg`,  alt: 'Diagnóstico electrónico en Eprom' },
+  { src: `${base}galeria/FRS_9712.jpg`,  alt: 'Reparación de vehículos en Mallorca' },
+  { src: `${base}galeria/FRS_9714.jpg`,  alt: 'Instalaciones del taller Eprom' },
+  { src: `${base}galeria/FRS_9726.jpg`,  alt: 'Mecánicos trabajando en Eprom' },
+  { src: `${base}galeria/FRS_9801.jpg`,  alt: 'Servicio de electromecánica en Palma' },
 ];
 ---
 
@@ -59,14 +60,15 @@ const imagenes = [
 </div>
 
 <script>
+  const BASE = import.meta.env.BASE_URL;
   const images = [
-    { src: '/galeria/FRS_9654.jpg',  alt: 'Taller Electromecánica Eprom — vista general' },
-    { src: '/galeria/FRS_9697.jpg',  alt: 'Trabajos de mecánica en Eprom Palma' },
-    { src: '/galeria/FRS_9708.jpg',  alt: 'Diagnóstico electrónico en Eprom' },
-    { src: '/galeria/FRS_9712.jpg',  alt: 'Reparación de vehículos en Mallorca' },
-    { src: '/galeria/FRS_9714.jpg',  alt: 'Instalaciones del taller Eprom' },
-    { src: '/galeria/FRS_9726.jpg',  alt: 'Mecánicos trabajando en Eprom' },
-    { src: '/galeria/FRS_9801.jpg',  alt: 'Servicio de electromecánica en Palma' },
+    { src: `${BASE}galeria/FRS_9654.jpg`,  alt: 'Taller Electromecánica Eprom — vista general' },
+    { src: `${BASE}galeria/FRS_9697.jpg`,  alt: 'Trabajos de mecánica en Eprom Palma' },
+    { src: `${BASE}galeria/FRS_9708.jpg`,  alt: 'Diagnóstico electrónico en Eprom' },
+    { src: `${BASE}galeria/FRS_9712.jpg`,  alt: 'Reparación de vehículos en Mallorca' },
+    { src: `${BASE}galeria/FRS_9714.jpg`,  alt: 'Instalaciones del taller Eprom' },
+    { src: `${BASE}galeria/FRS_9726.jpg`,  alt: 'Mecánicos trabajando en Eprom' },
+    { src: `${BASE}galeria/FRS_9801.jpg`,  alt: 'Servicio de electromecánica en Palma' },
   ];
 
   let current = 0;
