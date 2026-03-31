@@ -178,6 +178,10 @@ h3 { font-size: clamp(1.4rem, 2.5vw, 2rem); line-height: 1.1; letter-spacing: 0.
   .section-inner {
     padding: 0 16px !important;
   }
+  /* Hide hero logo on mobile */
+  .hero-logo-col {
+    display: none !important;
+  }
   /* CTA buttons wrap */
   .hero-cta-row {
     flex-direction: column !important;
@@ -264,5 +268,80 @@ h3 { font-size: clamp(1.4rem, 2.5vw, 2rem); line-height: 1.1; letter-spacing: 0.
   display: inline-block;
   opacity: 0;
   animation: letterFadeIn 0.05s ease-out forwards;
+}
+
+/* ============================================
+   BLOG ARTICLE — DARK THEME OVERRIDES
+   ============================================ */
+article .prose {
+  color: #b0b8c1 !important;
+}
+article .prose strong {
+  color: #F0F0F0;
+}
+article .prose h2 {
+  color: #F0F0F0 !important;
+}
+article .prose ul {
+  color: #b0b8c1;
+}
+article .prose p {
+  color: #b0b8c1;
+}
+article .prose table {
+  color: #b0b8c1;
+}
+article .prose table thead tr {
+  background: #F5A623 !important;
+  color: #111111 !important;
+}
+article .prose table thead th {
+  color: #111111 !important;
+}
+article .prose table tbody tr {
+  border-color: #333 !important;
+  background: transparent !important;
+}
+article .prose table tbody tr:nth-child(even) {
+  background: #242424 !important;
+}
+article .prose table td {
+  color: #b0b8c1;
+}
+
+/* Blog back link */
+article a[href="/blog/"] {
+  color: #F5A623 !important;
+}
+
+/* Blog page header */
+article h1 {
+  color: #F0F0F0 !important;
+  font-family: 'Bebas Neue', sans-serif !important;
+}
+
+/* Blog CTA box override */
+.blog-cta {
+  background: #242424 !important;
+  border-top: 3px solid #F5A623;
+  border-left: 1px solid #333;
+  border-right: 1px solid #333;
+  border-bottom: 1px solid #333;
+  border-radius: 2px;
+}
+.blog-cta p {
+  color: #9ca3af !important;
+}
+.blog-cta a {
+  background: #F5A623 !important;
+  color: #111111 !important;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border-radius: 2px !important;
+}
+.blog-cta a:hover {
+  background: #c97d10 !important;
 }
 
