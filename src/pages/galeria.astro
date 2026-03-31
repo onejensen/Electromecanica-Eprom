@@ -50,6 +50,85 @@ const imagenes = [
   </section>
 </Layout>
 
+<!-- Lightbox overlay -->
+<div id="lb-overlay" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,0.92);align-items:center;justify-content:center;">
+  <button id="lb-close" aria-label="Cerrar" style="position:absolute;top:20px;right:28px;background:none;border:none;color:#F5A623;font-size:2.5rem;line-height:1;cursor:pointer;font-family:'Bebas Neue',sans-serif;">×</button>
+  <button id="lb-prev" aria-label="Anterior" style="position:absolute;left:16px;top:50%;transform:translateY(-50%);background:none;border:none;color:#F5A623;font-size:3rem;line-height:1;cursor:pointer;font-family:'Bebas Neue',sans-serif;">‹</button>
+  <img id="lb-img" src="" alt="" style="max-width:90vw;max-height:90vh;object-fit:contain;display:block;border:2px solid #333;" />
+  <button id="lb-next" aria-label="Siguiente" style="position:absolute;right:16px;top:50%;transform:translateY(-50%);background:none;border:none;color:#F5A623;font-size:3rem;line-height:1;cursor:pointer;font-family:'Bebas Neue',sans-serif;">›</button>
+</div>
+
+<script>
+  const images = [
+    { src: '/galeria/FRS_9654.jpg',  alt: 'Taller Electromecánica Eprom — vista general' },
+    { src: '/galeria/FRS_9697.jpg',  alt: 'Trabajos de mecánica en Eprom Palma' },
+    { src: '/galeria/FRS_9708.jpg',  alt: 'Diagnóstico electrónico en Eprom' },
+    { src: '/galeria/FRS_9712.jpg',  alt: 'Reparación de vehículos en Mallorca' },
+    { src: '/galeria/FRS_9714.jpg',  alt: 'Instalaciones del taller Eprom' },
+    { src: '/galeria/FRS_9726.jpg',  alt: 'Mecánicos trabajando en Eprom' },
+    { src: '/galeria/FRS_9801.jpg',  alt: 'Servicio de electromecánica en Palma' },
+  ];
+
+  let current = 0;
+
+  const overlay = document.getElementById('lb-overlay');
+  const lbImg   = document.getElementById('lb-img');
+  const btnClose = document.getElementById('lb-close');
+  const btnPrev  = document.getElementById('lb-prev');
+  const btnNext  = document.getElementById('lb-next');
+
+  function openLightbox(index) {
+    current = index;
+    lbImg.src = images[current].src;
+    lbImg.alt = images[current].alt;
+    overlay.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    overlay.style.display = 'none';
+    document.body.style.overflow = '';
+  }
+
+  function showPrev() {
+    current = (current - 1 + images.length) % images.length;
+    lbImg.src = images[current].src;
+    lbImg.alt = images[current].alt;
+  }
+
+  function showNext() {
+    current = (current + 1) % images.length;
+    lbImg.src = images[current].src;
+    lbImg.alt = images[current].alt;
+  }
+
+  // Open on card click
+  document.querySelectorAll('.gallery-item').forEach((card) => {
+    card.addEventListener('click', () => {
+      const index = parseInt(card.dataset.index, 10);
+      openLightbox(index);
+    });
+  });
+
+  // Controls
+  btnClose.addEventListener('click', closeLightbox);
+  btnPrev.addEventListener('click', (e) => { e.stopPropagation(); showPrev(); });
+  btnNext.addEventListener('click', (e) => { e.stopPropagation(); showNext(); });
+
+  // Click outside image closes
+  overlay.addEventListener('click', (e) => {
+    if (e.target === overlay) closeLightbox();
+  });
+
+  // Escape key closes; arrow keys navigate
+  document.addEventListener('keydown', (e) => {
+    if (overlay.style.display === 'none') return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') showPrev();
+    if (e.key === 'ArrowRight') showNext();
+  });
+</script>
+
 <style>
   .gallery-item:hover img {
     transform: scale(1.05);
